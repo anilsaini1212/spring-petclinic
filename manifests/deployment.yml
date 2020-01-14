@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: anilsainispringpetclinic 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: anilsainispringpetclinic 
+    spec:
+      containers:
+        - name: anilsainispringpetclinic 
+          image: devopstestanil.azurecr.io/anilsainispringpetclinic
+          ports:
+          - containerPort: 80
